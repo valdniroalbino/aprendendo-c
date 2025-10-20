@@ -5,13 +5,13 @@ números é o maior.*/
 #include <stdio.h>
 
 int main(){
-    int i=1,maior,numero;
+    int i=1,maior = 0,numero;
 
-    while(i <= 10){
+    while(i <= 5){
         printf("digite um numero: ");
         scanf("%d",&numero);
 
-        maior = numero; 
+        //maior = numero; 
 
         if(numero > maior)
             maior = numero;
