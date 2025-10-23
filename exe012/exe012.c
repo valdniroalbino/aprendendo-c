@@ -1,3 +1,6 @@
+/*Escreva um programa que leia quatro valores inteiros. Assumindo que os
+números são diferentes, mostre-os em ordem decrescente.*/
+
 #include <stdio.h>
 
 void insertionSort(int aux[],int n){

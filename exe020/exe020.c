@@ -1,3 +1,7 @@
+/*. Seja a seguinte série: 1, 4, 4, 2, 5, 5, 3, 6, 6, 4, 7, 7, ... Elabore um
+programa que seja capaz de gerar os N termos desta série, sendo que N
+deve ser informado pelo utilizador.*/
+
 #include <stdio.h>
 
 int main(){
