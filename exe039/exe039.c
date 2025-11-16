@@ -55,7 +55,9 @@ int main(){
             case 1:
                 int opcao1;
                 printf("1 - ligar/desligar;\n2 - buzinar;\n3 - liga/desligar luzes;\n4 - trocar a potencia;\n5 - ver potencia;\n6 - ver cor;\n7 - alterar cor;\n8 - apagar carro;\n");
-                printf("digite o numero: ",&opcao1);
+                printf("digite o numero: ");
+                scanf("%d",&opcao1);
+                
 
                 switch(opcao1){
                     case 1:
@@ -158,4 +160,5 @@ int main(){
         }
         i++;
     }
+    return 0;
 }
