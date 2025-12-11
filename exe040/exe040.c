@@ -201,3 +201,5 @@ void limparLista(struct no **l) {
 
     *l = NULL;             
 }
+
+void numeroDEnos(struct no *l);
