@@ -13,6 +13,6 @@ void criarLista(LCD *l);
 void addCandidato(LCD *l,char nome[]);
 void imprimirLista(LCD *l);
 void sortear(LCD *l,int x, int inicio);
-void free(LCD *l);
+void freeLCD(LCD *l);
 
 #endif 

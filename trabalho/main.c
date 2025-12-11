@@ -35,6 +35,7 @@ int main(){
 
     printf("\nLista atual:\n");
     imprimirLista(&l);
+    printf("\n");
 
     printf("Insere um número para escolher a posição inicial (1..%d): ", candidatos);
     if(scanf("%d", &n_aleatorio) != 1){
@@ -60,7 +61,7 @@ int main(){
 
     sortear(&l, x_saltos, inicio);
 
-    free(&l);
+    freeLCD(&l);
 
     return 0;
 }

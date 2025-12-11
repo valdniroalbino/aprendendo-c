@@ -7,40 +7,44 @@ void criarLista(LCD *l){
     *l = NULL;
 }
 
-void addCandidato(LCD *l,char nome[]){
+void addCandidato(LCD *l, char nome[]){
     no *novo = malloc(sizeof(no));
-    if(novo){
-        if (strlen(nome) <= sizeof(novo->candidato)-1){
-             strcpy(novo->candidato, nome);
-        }else{
-            puts("nome demasiado grande.");
-            free(novo);
-            return;
-        }
-
-        if( *l == NULL ){
-            novo->prox = novo;
-            novo->ant = novo;
-            (*l) = novo;
-        }else{
-            novo->prox = (*l);
-            novo->ant = (*l)->ant;
-            (*l)->ant = novo;
-            (*l)->ant->prox = novo;
-            (*l) = novo;
-        }
-    }else{
+    if (!novo) {
         puts("erro de alocação..");
-        return ; 
+        return;
     }
-    puts(" candidato adicionada com sucesso");
+
+    if (strlen(nome) <= sizeof(novo->candidato)-1) {
+        strcpy(novo->candidato, nome);
+    } else {
+        puts("nome demasiado grande.");
+        free(novo);
+        return;
+    }
+
+    if (*l == NULL) {
+        novo->prox = novo;
+        novo->ant  = novo;
+        *l = novo;
+    } else {
+        no *aux = *l;        
+        novo->prox = aux;   
+        novo->ant  = aux->ant; 
+
+        aux->ant->prox = novo; 
+        aux->ant = novo;      
+
+        *l = novo;            
+    }
+
+    puts("candidato adicionado com sucesso");
 }
 
 void imprimirLista(LCD *l){
     no *aux = *l;
     if( *l != NULL){
         do{
-         printf(" %s - ",aux->candidato);
+         printf(" %s  ",aux->candidato);
          if(aux->prox == *l) break;
          aux = aux->prox;
         }while( aux != *l );
@@ -97,7 +101,7 @@ void sortear(LCD *l,int x, int inicio){
     printf("Vencedor: %s\n", (*l)->candidato);
 }   
 
-void free(LCD *l){
+void freeLCD(LCD *l){
     if(l == NULL) return;
 
     no *aux = *l;  
