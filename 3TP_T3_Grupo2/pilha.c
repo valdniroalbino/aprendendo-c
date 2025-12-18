@@ -7,7 +7,7 @@ void criarPilha(pilha *p){
 }
 
 int pilhaVazia(pilha *p){
-    return (p->topo == NULL); // ou seja, se isso for verdade vai retornar 1, caso contrario sera 0
+    return (p->topo == NULL);
 }
 
 void push(pilha *p,int v){

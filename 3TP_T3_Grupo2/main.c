@@ -12,7 +12,7 @@ int maiorAreaHistograma(int v[], int n){
         int alturaAtual;
 
         if(i == n)
-            alturaAtual = 0; // estou a utlizar isso para parar tds as barras no final.
+            alturaAtual = 0; 
         else
             alturaAtual = v[i];
 
@@ -35,9 +35,6 @@ int maiorAreaHistograma(int v[], int n){
     freePilha(&p);
     return areaMax;
 }
-
-/*nao coloquei tambem essa funcao nos outros arquivos pq essa funcao
-é algo exclusivo desse problema de histograma. nao faz parte do TAD pilha */
 
 int main(){
     int n;
