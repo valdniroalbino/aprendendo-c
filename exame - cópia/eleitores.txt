@@ -1,0 +1,3 @@
+Maria 10 0
+Paulo 11 0
+Ana 12 0
