@@ -16,7 +16,10 @@ Eleitor *criarEleitor(int id,const char *nome){
 
 void inserirEleitor(Eleitor **lista,Eleitor *novo){
     if(!novo)return;
-    if(!*lista){*lista=novo;return;}
+    if(!*lista){
+        *lista=novo;
+        return;
+    }
     Eleitor *aux=*lista;
     while(aux->prox)aux=aux->prox;
     aux->prox=novo;
@@ -104,12 +107,15 @@ Candidato *procurarCandidato(Candidato *lista,int id){
 }
 
 int removerCandidato(Candidato **lista,int id){
-    Candidato *ant=NULL,*at=*lista;
-    while(at&&at->id!=id){ant=at;at=at->prox;}
-    if(!at)return 0;
-    if(!ant)*lista=at->prox;
-    else ant->prox=at->prox;
-    free(at);
+    Candidato *ant=NULL,*atual=*lista;
+    while(atual&&atual->id!=id){
+        ant=atual;
+        atual=atual->prox;
+    }
+    if(!atual)return 0;
+    if(!ant)*lista=atual->prox;
+    else ant->prox=atual->prox;
+    free(atual);
     return 1;
 }
 
@@ -178,7 +184,10 @@ int removerFila(Fila *fila){
 
 int desistirFila(Fila *fila,int id){
     NoFila *ant=NULL,*at=fila->ini;
-    while(at&&at->idEle!=id){ant=at;at=at->prox;}
+    while(at&&at->idEle!=id){
+        ant=at;
+        at=at->prox;
+    }
     if(!at)return 0;
     if(!ant)fila->ini=at->prox;
     else ant->prox=at->prox;

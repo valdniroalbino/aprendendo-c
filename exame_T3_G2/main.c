@@ -1,7 +1,5 @@
 #include "sistema.h"
 
-
-
 void menuEleitores(Eleitor **lista){
     int opcao;
     do{
