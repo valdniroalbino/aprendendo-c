@@ -107,7 +107,7 @@ void menuCandidatos(Candidato **lista){
     }while(opcao!=0);
 }
 
-int main(){
+int main(void){
     Eleitor *listaEleitores=NULL;
     Candidato *listaCandidatos=NULL;
     Fila filas[NUM_URNAS];
@@ -147,6 +147,14 @@ int main(){
         else if(opcao==3){
             if(votacaoIniciada){
                 printf("A votacao ja foi inicializada.\n");
+                continue;
+            }
+            if(!listaEleitores){
+                printf("Nao existem eleitores registados.\n");
+                continue;
+            }
+            if(!listaCandidatos){
+                printf("Nao existem candidatos registados.\n");
                 continue;
             }
 
