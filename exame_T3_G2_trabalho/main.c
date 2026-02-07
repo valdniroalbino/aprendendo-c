@@ -178,7 +178,7 @@ int main(){
                 scanf("%d", &idCandidato);
 
                 Voto voto = {1, 1, 2026, 10, 0, urna, idCandidato};
-                processarVoto(&resultado, &auditoria, voto);
+                processarVoto(&resultado, &auditoria, voto, listaCandidatos);
 
                 if(idCandidato > 0){
                     Candidato *c = procurarCandidato(listaCandidatos, idCandidato);
