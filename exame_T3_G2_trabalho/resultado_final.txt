@@ -1,0 +1,5 @@
+Total eleitores:8
+Validos:3 Brancos:1 Nulos:0
+jlo (123): 0 votos
+acj (232): 0 votos
+isabel (333): 0 votos
