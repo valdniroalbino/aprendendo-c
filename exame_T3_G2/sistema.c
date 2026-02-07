@@ -1,7 +1,7 @@
 #include "sistema.h"
 #include <string.h>
 
-/* ================= ELEITORES ================= */
+/* ELEITORE */
 
 Eleitor *criarEleitor(int id,const char *nome){
     Eleitor *novo=malloc(sizeof(Eleitor));
@@ -91,7 +91,7 @@ void libertarEleitores(Eleitor **lista){
     }
 }
 
-/* ================= CANDIDATOS ================= */
+/* CANDIDATOS */
 
 int inserirCandidato(Candidato **lista,int id,char nome[]){
     if(procurarCandidato(*lista,id))return 0;
@@ -168,7 +168,7 @@ void libertarCandidatos(Candidato **lista){
     }
 }
 
-/* ================= FILAS ================= */
+/* FILAS */
 
 void iniciarFila(Fila *fila){
     fila->ini=NULL;
@@ -242,7 +242,7 @@ void libertarFila(Fila *fila){
     while(fila->ini)removerFila(fila);
 }
 
-/* ================= PILHA ================= */
+/* PILH */
 
 void criarPilha(Pilha *pilha){
     pilha->topo=NULL;
@@ -277,7 +277,7 @@ void libertarPilha(Pilha *pilha){
     while(!pilhaVazia(pilha))desempilhar(pilha);
 }
 
-/* ================= RESULTADOS ================= */
+/* RESULTADOS */
 
 void iniciarVotacao(Resultado *r){
     r->validos=0;

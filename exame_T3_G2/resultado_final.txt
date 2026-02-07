@@ -1,6 +1,6 @@
-Total eleitores:3
-Validos:3 Brancos:0 Nulos:0
+Total eleitores:4
+Validos:2 Brancos:0 Nulos:1
 jlo (123): 1 votos
 acj (232): 0 votos
-isabel (333): 2 votos
-VENCEDOR: isabel (333)
+isabel (333): 1 votos
+VENCEDOR: jlo (123)

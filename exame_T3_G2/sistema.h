@@ -6,7 +6,7 @@
 
 #define NUM_URNAS 3
 
-/* ================= ELEITORES ================= */
+/* ELEITORES */
 
 typedef struct Eleitor{
     int id;
@@ -25,7 +25,7 @@ void imprimirEleitores(Eleitor *lista);
 void carregarEleitoresFicheiro(Eleitor **lista,const char *nomeFicheiro);
 void libertarEleitores(Eleitor **lista);
 
-/* ================= CANDIDATOS ================= */
+/* CANDIDATOS */
 
 typedef struct Candidato{
     int id;
@@ -41,7 +41,7 @@ void imprimirCandidatos(Candidato *lista);
 void carregarCandidatosFicheiro(Candidato **lista,const char *nomeFicheiro);
 void libertarCandidatos(Candidato **lista);
 
-/* ================= FILAS ================= */
+/* FILAS */
 
 typedef struct NoFila{
     int idEle;
@@ -63,7 +63,7 @@ void imprimirFila(Fila *fila);
 int tamanhoFila(Fila *fila);
 void libertarFila(Fila *fila);
 
-/* ================= VOTO / PILHA ================= */
+/* VOTO / PILHA */
 
 typedef struct{
     int dia,mes,ano;
@@ -87,7 +87,7 @@ void empilhar(Pilha *pilha,Voto voto);
 Voto desempilhar(Pilha *pilha);
 void libertarPilha(Pilha *pilha);
 
-/* ================= RESULTADOS ================= */
+/*  RESULTADOS */
 
 typedef struct{
     int validos;
