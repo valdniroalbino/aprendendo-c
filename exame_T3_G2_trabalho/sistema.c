@@ -358,3 +358,4 @@ void gerarFicheiroFinal(Resultado *r,Candidato *c,int total){
 
     fclose(f);
 }
+

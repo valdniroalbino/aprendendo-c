@@ -102,3 +102,4 @@ void mostrarResultadoFinal(Resultado *resultado,Candidato *candidatos);
 void gerarFicheiroFinal(Resultado *resultado,Candidato *candidatos,int totalEleitores);
 
 #endif
+
